@@ -11,17 +11,22 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(express.static('public'));
 
-
-
-
 // ToDo: Need to connect to MongoDB using Mongoose.
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/social-network-api", {
+    useFindAndModify: false,
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+});
 
+// Log Mongo queries that is being executed.
+mongoose.set("debug", true);
 
-
-// ToDo: Need to define Routes API.
-
-
-
+// Define routes for different parts of the API.
+app.use('/api/users', userRoutes);
+app.use('/api/thoughts', thoughtRoutes);
+app.use('/api/reactions', reactionRoutes);
+app.use('/api/friends', friendRoutes);
 
 // Start the server.
 app.listen(PORT, () => {
