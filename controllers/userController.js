@@ -1,10 +1,10 @@
+// Importing the Thought & User from the '../models' directory.
 const { Thought, User } = require("../models");
-
 
 const userController = {
 
     // Todos: GET all users.
-    async getUsers(req, res) {
+    async getUser(req, res) {
 
     },
 
@@ -40,5 +40,5 @@ const userController = {
 
 };
 
-
+// Exporting the userController.
 module.exports = userController;

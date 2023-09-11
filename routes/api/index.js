@@ -3,7 +3,7 @@ const router = require('express').Router();
 
 // Importing routes for friends, reactions, thoughts and users.
 const friendRoutes = require('./friendRoutes');
-const reactionRoutes = require('./reactionsRoutes');
+const reactionRoutes = require('./reactionRoutes');
 const thoughtRoutes = require('./thoughtRoutes');
 const userRoutes = require('./userRoutes');
 

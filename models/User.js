@@ -1,7 +1,7 @@
 // Imports modules from the Mongoose library.
 const { Schema, model } = require('mongoose');
 
-// Schema to create Student model
+// Defines a new schema for user.
 const userSchema = new Schema(
   {
     username: {
@@ -32,7 +32,7 @@ const userSchema = new Schema(
   },
   {
     toJSON: {
-      virtuals: true,
+      getters: true,
     },
     id: false,
   }

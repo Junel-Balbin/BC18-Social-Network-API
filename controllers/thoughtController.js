@@ -1,9 +1,10 @@
+// Importing the Thought & User from the '../models' directory.
 const { Thought, User } = require("../models");
 
 const thoughtController = {
 
     // GET all thoughts.
-    async getAllThought(req, res) {
+    async getThought(req, res) {
 
     },
 
@@ -25,9 +26,17 @@ const thoughtController = {
     // Delete thought.
     async deleteThought(req, res) {
         
+    },
+    // Add reaction.
+    async addReaction(req, res) {
+        
+    },
+    // Delete reaction.
+    async deleteReaction(req, res) {
+        
     }
 
 };
 
-
+// Exporting the thoughtController.
 module.exports = thoughtController;

@@ -8,7 +8,9 @@ const apiRoutes = require('./api');
 router.use('/api', apiRoutes);
 
 // Error message when handling request with wrong routes.
-router.use((req, res) => res.send('Error Wrong Route 😝.'));
+router.use((req, res) => {
+    return res.send('Error Wrong Route 😝.');
+});
 
 // Exporting the router.
 module.exports = router;
