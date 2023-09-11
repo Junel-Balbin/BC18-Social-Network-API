@@ -1,15 +1,11 @@
 // Importing the Express router.
 const router = require('express').Router();
 
-// Importing routes for friends, reactions, thoughts and users.
-const friendRoutes = require('./friendRoutes');
-const reactionRoutes = require('./reactionRoutes');
+// Importing routes for thoughts and users.
 const thoughtRoutes = require('./thoughtRoutes');
 const userRoutes = require('./userRoutes');
 
 // // Setting up the routes.
-router.use('/friend', friendRoutes);
-router.use('/reaction', reactionRoutes);
 router.use('/thought', thoughtRoutes);
 router.use('/user', userRoutes);
 
