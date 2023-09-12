@@ -20,12 +20,14 @@ const userController = {
         try {
             const user = await User.findOne({ _id: req.params.userId })
               .select('-__v')
-              .lean();
-      
+              .populate({ path: "thoughts", select: "-__v" })
+              .populate({ path: "friends", select: "-__v" });
+              
             if (!user) {
               return res.status(404).json({ message: 'No User with that ID' });
             }
 
+            return res.status(200).json(user);
           } catch (err) {
             console.log(err);
             return res.status(500).json(err);
@@ -37,9 +39,10 @@ const userController = {
     async createUser(req, res) {
         try {
             const user = await User.create(req.body);
-            res.json(user);
+            return res.status(200).json(user);
+
           } catch (err) {
-            res.status(500).json(err);
+            return res.status(500).json(err);
           }
 
     },
@@ -48,16 +51,16 @@ const userController = {
     async updateUser(req, res) {
         try {
             const user = await User.findOneAndUpdate(
-                { _id:req.params.userId },
-                { $set: req.body},
+                { _id: req.params.userId },
+                { $set: req.body },
                 { runValidators: true, new: true }
             );
             if (!user) {
                 return res.status(404).json({ message: 'No user with that ID' })
             }
-            res.json(user);
+            return res.status(200).json(user);
         } catch (err) {
-            res.status(500).json(err);
+            return res.status(500).json(err);
         }
 
     },
@@ -70,11 +73,11 @@ const userController = {
             if (!user) {
               return res.status(404).json({ message: 'No User exists' })
             }
-            res.json({ message: 'User successfully deleted.' });
+            return res.status(200).json ({ message: 'User successfully deleted.' });
 
           } catch (err) {
             console.log(err);
-            res.status(500).json(err);
+            return res.status(500).json(err);
           }
 
     },
@@ -93,7 +96,7 @@ const userController = {
             }
             res.json(user);
           } catch (err) {
-            res.status(500).json(err);
+            return res.status(500).json(err);
           }
 
     },
@@ -115,7 +118,7 @@ const userController = {
       
             res.json({message: 'Friend removed!'});
           } catch (err) {
-            res.status(500).json(err);
+            return res.status(500).json(err);
           }
     },
         

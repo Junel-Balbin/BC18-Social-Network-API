@@ -6,7 +6,7 @@ const dateFormat = require('../utils/dateFormat');
 // Defines a new schema for thought.
 const thoughtSchema = new Schema(
   {
-    thoughtText: {
+    thought: {
       type: String,
       required: true,
       minlength: 1,

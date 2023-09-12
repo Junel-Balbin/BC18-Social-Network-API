@@ -52,7 +52,7 @@ userSchema.pre("findOneAndDelete", { document: false, query: true }, async funct
 });
 
 // Creates User model with userSchema.
-const User = model('user', userSchema);
+const User = model('User', userSchema);
 
 // Exports User.
 module.exports = User;
