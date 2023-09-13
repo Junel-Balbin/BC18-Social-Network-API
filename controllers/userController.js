@@ -7,7 +7,7 @@ const userController = {
     async getUser(req, res) {
         try {
             const user = await User.find();
-            res.status(200).json(user);
+            return res.status(200).json(user);
           } catch (err) {
             console.log(err);
             return res.status(500).json(err);
@@ -19,9 +19,9 @@ const userController = {
     async getUserById(req, res) {
         try {
             const user = await User.findOne({ _id: req.params.userId })
-              .select('-__v')
-              .populate({ path: "thoughts", select: "-__v" })
-              .populate({ path: "friends", select: "-__v" });
+            .select('-__v')
+            .populate({ path: "thoughts", select: "-__v" })
+            .populate({ path: "friends", select: "-__v" });
               
             if (!user) {
               return res.status(404).json({ message: 'No User with that ID' });

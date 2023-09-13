@@ -16,6 +16,8 @@
 ## Description:
 * With its large and unstructured data, MongoDB makes it a top pick for social networks. To meet the challenge of building a social network web app API. We'll employ Express.js for routing, leverage a MongoDB database and utilize Mongoose ODM. Additionally, we'll integrate a JavaScript date library to utilize the native Date object for timestamp formatting.
 
+* BONUS COMPLETED: Application deletes a user's associated thoughts when the user is deleted. Feature to remove a user's associated thoughts when deleted.
+
 ### User Story:
 ```md
 AS A social media startup
@@ -36,7 +38,7 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 ```
 
 ## Installation:
-* `git clone git@github.com:Junel-Balbin/BC18-Social-Network-API.git`
+* `git clone the repository`
 * `npm install`
 * `npm start`
 
@@ -46,11 +48,10 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 
 
 ## Video Walkthrough:
-* 🎥 [Video Walkthrough: Social Network API.]()
+* 🎥 [Video Walkthrough: Social Network API.](https://www.youtube.com/watch?v=wNWmL8F7Fek)
 
 ## Application User Interface:
-* 
-* 
+<img src="./assets/images/sreenshot.png">
 
 ## Credits and Resources:
 * Google search & Youtube videos.

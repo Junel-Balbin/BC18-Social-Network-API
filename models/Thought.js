@@ -41,3 +41,5 @@ thoughtSchema.virtual('reactionCount').get(function() {
 const Thought = model('Thought', thoughtSchema);
 
 module.exports = Thought;
+
+// Class Mini Project 18 was a big help with structure and code snippets.

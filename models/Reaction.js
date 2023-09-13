@@ -34,3 +34,5 @@ const reactionSchema = new Schema(
 
 // Exports the reactionSchema.
 module.exports = reactionSchema;
+
+// Class Mini Project 18 was a big help with structure and code snippets.

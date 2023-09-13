@@ -2,7 +2,6 @@
 const express = require('express');
 const db = require('./config/connection');
 const routes = require('./routes');
-const dateFormat = require('../utils/dateFormat');
 
 // Create server port & set server port.
 const app = express();

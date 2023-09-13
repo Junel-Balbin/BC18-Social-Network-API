@@ -11,17 +11,19 @@ const {
     deleteReaction
 } = require('../../controllers/thoughtController');
 
-// /api/thought
+// http://localhost:3001/api/thought
 router.route('/').get(getThought).post(createThought);
 
-// /api/thought/:thoughtId
+// http://localhost:3001/api/thought/:thoughtId
 router.route('/:thoughtId').get(getThoughtById).put(updateThought).delete(deleteThought);
 
-// /api/thought/:thoughtId/reactions
+// http://localhost:3001/api/thought/:thoughtId/reactions
 router.route('/:thoughtId/reactions').post(addReaction);
 
-// /api/thought/:thoughtId/reactions/:reactionId
+// http://localhost:3001/api/thought/:thoughtId/reactions/:reactionId
 router.route('/:thoughtId/reactions/:reactionId').delete(deleteReaction);
 
 // Exporting the router.
 module.exports = router;
+
+// Class Mini Project 18 was a big help with structure and code snippets.
