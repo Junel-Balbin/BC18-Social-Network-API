@@ -48,7 +48,7 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 
 
 ## Video Walkthrough:
-* 🎥 [Video Walkthrough: Social Network API.](https://www.youtube.com/watch?v=wNWmL8F7Fek)
+* 🎥 [Video Walkthrough: Social Network API.](https://www.youtube.com/watch?v=vhb8g98xA-E)
 
 ## Application User Interface:
 <img src="./assets/images/sreenshot.png">
